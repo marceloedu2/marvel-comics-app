@@ -1,7 +1,8 @@
 import React from 'react'
+import AuthTemplate from '@/template/AuthenticationTemplate'
 
-const dashboard = () => {
-  return <div>dashboard</div>
+const favorites = () => {
+  return <AuthTemplate>favorites</AuthTemplate>
 }
 
-export default dashboard
+export default favorites
