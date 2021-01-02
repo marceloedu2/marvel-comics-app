@@ -10,7 +10,5 @@ module.exports = withPWA({
 })
 
 module.exports = {
-  plugins: [
-    ['module-resolver', { root: ['./src'], alias: { '@': './src' } }]
-  ]
+  plugins: [['module-resolver', { root: ['./src'], alias: { '@': './src' } }]]
 }
