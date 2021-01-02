@@ -4,7 +4,7 @@ declare global {
   namespace jest {
     interface asymmetricMatcher {
       $$typeof: symbol
-      // eslint-disable-next-line @typescript-eslint/ban-types
+      // eslint-disable-next-line @typescript-eslint/ban-@types
       sample?: string | RegExp | object | Array<never> | Function
     }
 
