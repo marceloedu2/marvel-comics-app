@@ -23,8 +23,8 @@ export const Content = styled.div`
 
     transition: width 0.3s, height 0.3s;
     svg {
-      transition: font-size 0.3s;
       font-size: ${theme.font.sizes.xxxlarge};
+      transition: font-size 0.3s;
     }
     &:hover {
       width: 25.5rem;
