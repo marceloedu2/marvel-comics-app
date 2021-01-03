@@ -12,10 +12,7 @@ interface IContainerSign {
 const ContainerSign = ({ children, title, ...props }: IContainerSign) => {
   return (
     <Styles.Container>
-      <img
-        src="https://cdn.worldvectorlogo.com/logos/marvel.svg"
-        alt="Marvel"
-      />
+      <img src="/img/marvel.svg" alt="Marvel" />
       <h3>{title}</h3>
       <Styles.ContentForm ref={props.formRef} onSubmit={props.onSubmit}>
         {children}

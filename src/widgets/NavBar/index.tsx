@@ -13,10 +13,7 @@ const NavBar = () => {
       <Styles.Content>
         <Styles.ContentLogo>
           <Link href="/favorites">
-            <img
-              src="https://cdn.worldvectorlogo.com/logos/marvel.svg"
-              alt="Marvel"
-            />
+            <img src="/img/marvel.svg" alt="Marvel" />
           </Link>
         </Styles.ContentLogo>
         <Styles.LinksContent>
