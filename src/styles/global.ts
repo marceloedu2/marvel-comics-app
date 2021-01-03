@@ -1,7 +1,7 @@
 import { createGlobalStyle, css } from 'styled-components'
+import theme from '@/styles/theme'
 
 const GlobalStyle = createGlobalStyle`
-  ${({ theme }) => css`
     *[hidden] {
       display: none;
     }
@@ -232,7 +232,6 @@ const GlobalStyle = createGlobalStyle`
       display: flex;
       flex-shrink: 0;
     }
-  `}
 `
 
 export default GlobalStyle

@@ -97,12 +97,12 @@ const Profile = () => {
         <Input
           name="name"
           placeholder="Type your full name"
-          defaultValue={user.name}
+          defaultValue={user?.name}
         />
         <Input
           name="email"
           placeholder="Type your E-mail"
-          defaultValue={user.email}
+          defaultValue={user?.email}
         />
         <br />
         <Input
