@@ -26,20 +26,12 @@ const App = ({ Component, pageProps }: AppProps) => {
         <link rel="shortcut" href="/img/marvel.png" />
         <link rel="apple-touch-icon" href="/img/marvel.png" />
         <link rel="manifest" href="/manifest.json" />
-        <link rel="stylesheet" href="/css/nprogress.css" />
-        <meta
-          name="description"
-          content="A simple project starter to work with TypeScript, React, NextJs And Styled Components"
-        />
+        <link rel="stylesheet" type="text/css" href="/css/nprogress.css" />
+        <link rel="stylesheet" type="text/css" href="/css/slick.min.css" />
         <link
           rel="stylesheet"
           type="text/css"
-          href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css"
-        />
-        <link
-          rel="stylesheet"
-          type="text/css"
-          href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css"
+          href="/css/slick-theme.min.css"
         />
       </Head>
       <ThemeProvider theme={theme}>
