@@ -5,9 +5,6 @@ export const Container = styled.div`
     width: 100%;
     height: auto;
     && {
-       .slick-arrow {
-          display: none !important;
-       }
       .slick-dots {
         display: flex!important;
         justify-content: center;

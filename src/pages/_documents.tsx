@@ -34,9 +34,9 @@ export default class MyDocument extends Document {
   }
   render(): JSX.Element {
     return (
-      <Html lang="pt=br">
+      <Html lang="en">
         <Head>
-          <title>Client</title>
+          <title>Marvel-comics</title>
         </Head>
         <body>
           <Main />

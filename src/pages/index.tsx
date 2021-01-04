@@ -16,7 +16,7 @@ import Button from '@/components/Button'
 
 import getValidationErrors from '@/utils/getValidationErrors'
 
-export default function Home() {
+const Login = () => {
   const router = useRouter()
   const formRef = useRef<FormHandles>(null)
   const { signIn } = useAuth()
@@ -77,3 +77,5 @@ export default function Home() {
     </DefaultTemplate>
   )
 }
+
+export default Login

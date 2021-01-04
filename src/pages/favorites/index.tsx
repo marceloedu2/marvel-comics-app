@@ -10,6 +10,8 @@ import Card from '@/components/Card'
 
 import { useToast } from '@/hooks/ToastHook'
 import api from '@/services/api'
+import { IoIosArrowBack, IoIosArrowForward } from 'react-icons/io'
+import theme from '@/styles/theme'
 
 const settings: Settings = {
   vertical: false,
@@ -18,7 +20,9 @@ const settings: Settings = {
   infinite: false,
   speed: 500,
   slidesToShow: 5,
-  slidesToScroll: 5
+  slidesToScroll: 5,
+  nextArrow: <IoIosArrowForward color={theme.colors.Primary} />,
+  prevArrow: <IoIosArrowBack color={theme.colors.Primary} />
 }
 
 export type ComicsFavoritesProps = {

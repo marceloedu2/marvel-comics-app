@@ -1,6 +1,5 @@
 import styled, { css } from 'styled-components'
 import { darken } from 'polished'
-import Link from 'next/link'
 
 export const Container = styled.div`
   ${({ theme }) => css`
