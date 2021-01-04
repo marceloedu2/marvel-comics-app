@@ -3,14 +3,10 @@ import { useField } from '@unform/core'
 
 import { FiAlertCircle } from 'react-icons/fi'
 import { IconBaseProps } from 'react-icons'
-import ReactInputMask, { Props as InputProps } from 'react-input-mask'
 
 import * as Styles from './styles'
 
-interface IInput
-  extends InputHTMLAttributes<
-    HTMLInputElement | HTMLTextAreaElement | InputProps
-  > {
+interface IInput extends InputHTMLAttributes<HTMLInputElement> {
   label?: string
   name: string
   required?: boolean
@@ -19,11 +15,7 @@ interface IInput
   iconLeft?: React.ComponentType<IconBaseProps>
   iconRight?: React.ComponentType<IconBaseProps>
   value?: string
-  cols?: number
-  rows?: number
   readonly?: boolean
-  mask?: string | RegExp[]
-  maskChar?: string
   currency?: string
 }
 
@@ -32,7 +24,6 @@ const Input: React.FC<IInput> = ({
   name,
   required,
   InputContainerStyle,
-  multiple,
   InitialText,
   iconLeft: IconLeft,
   iconRight: IconRight,
@@ -68,13 +59,7 @@ const Input: React.FC<IInput> = ({
         ) : (
           IconLeft && <IconLeft size={20} />
         )}
-        {multiple ? (
-          <textarea ref={inputRef} name={name} {...props} />
-        ) : props.mask ? (
-          <ReactInputMask mask="" ref={inputRef} name={name} {...props} />
-        ) : (
-          <input ref={inputRef} name={name} {...props} />
-        )}
+        <input ref={inputRef} name={name} {...props} />
 
         {error ? (
           <Styles.InputError title={error}>

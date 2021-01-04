@@ -15,6 +15,7 @@ const GlobalStyle = createGlobalStyle`
     }
 
     body {
+      z-index: 0;
       font: ${theme.font.sizes.medium} ${theme.font.family};
       line-height: 1;
 

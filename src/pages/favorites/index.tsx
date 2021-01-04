@@ -44,6 +44,7 @@ export type charactersFavoritesProps = {
   url: string
   liked: boolean
 }
+
 const Favorites = () => {
   const { addToast } = useToast()
 
