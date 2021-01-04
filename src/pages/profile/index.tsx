@@ -43,7 +43,13 @@ const Profile = () => {
       setLoading(true)
 
       await UserUpdateSchema.validate(
-        { name, email, password, oldPassword, passwordConfirmation },
+        {
+          name: name.trim(),
+          email,
+          password,
+          oldPassword,
+          passwordConfirmation
+        },
         {
           abortEarly: false
         }
@@ -51,7 +57,7 @@ const Profile = () => {
 
       await api.put('/user', {
         id: user.id,
-        name,
+        name: name.trim(),
         email: email === user.email ? '' : email,
         password,
         oldPassword
@@ -76,7 +82,7 @@ const Profile = () => {
       addToast({
         type: 'error',
         title: 'An error occurred while updating',
-        description: 'unexpected error.'
+        description: 'Invalid email or password.'
       })
       setLoading(false)
       return false

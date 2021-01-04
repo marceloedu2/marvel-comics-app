@@ -8,13 +8,17 @@ export const UserUpdateSchema = Yup.object().shape({
   oldPassword: Yup.string(),
   password: Yup.string().when('oldPassword', {
     is: (val: string) => !!val.length,
-    then: Yup.string().required('Password is required'),
+    then: Yup.string()
+      .required('Password is required')
+      .min(6, 'At least 6 characters'),
     otherwise: Yup.string()
   }),
   passwordConfirmation: Yup.string()
     .when('oldPassword', {
       is: (val: string) => !!val.length,
-      then: Yup.string().required('Password is required'),
+      then: Yup.string()
+        .required('Password is required')
+        .min(6, 'At least 6 characters'),
       otherwise: Yup.string()
     })
     .oneOf([Yup.ref('password'), null], 'Incorrect confirmation')

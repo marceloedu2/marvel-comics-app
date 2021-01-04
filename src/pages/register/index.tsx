@@ -26,13 +26,13 @@ const Register = () => {
       setLoading(true)
 
       await signUpSchema.validate(
-        { name, email, password },
+        { name: name.trim(), email, password },
         {
           abortEarly: false
         }
       )
 
-      const user = await signUp({ name, email, password })
+      const user = await signUp({ name: name.trim(), email, password })
       setLoading(false)
       addToast({
         type: 'success',
