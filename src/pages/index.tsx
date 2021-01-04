@@ -47,9 +47,7 @@ const Login = () => {
       addToast({
         type: 'error',
         title: 'Authentication error',
-        description:
-          err.message ||
-          'There was an error signing in, check your credentials.'
+        description: 'There was an error signing in, check your credentials.'
       })
       setLoading(false)
       return false

@@ -22,7 +22,6 @@ const Register = () => {
 
   const handleSubmit = async ({ name, email, password }: SignUpCredentials) => {
     formRef.current?.setErrors({})
-    console.log()
     try {
       setLoading(true)
 
@@ -51,7 +50,6 @@ const Register = () => {
         type: 'error',
         title: 'Create to account error',
         description:
-          err.message ||
           'There was an error creating your account, your credentials.'
       })
       setLoading(false)

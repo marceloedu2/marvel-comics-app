@@ -76,7 +76,7 @@ const Profile = () => {
       addToast({
         type: 'error',
         title: 'An error occurred while updating',
-        description: err.message || 'unexpected error.'
+        description: 'unexpected error.'
       })
       setLoading(false)
       return false
