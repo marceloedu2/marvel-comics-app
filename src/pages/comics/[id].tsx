@@ -113,7 +113,7 @@ const ComicsId = () => {
         />
       )}
 
-      <CardsContainer title=" Comics to Character">
+      <CardsContainer title="Characters Comic">
         <SliderContainer settings={settings}>
           {characters.length > 0 ? (
             characters.map(character => {
