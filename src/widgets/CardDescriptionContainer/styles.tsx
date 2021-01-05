@@ -7,6 +7,8 @@ export const Container = styled.div`
 
     margin: ${theme.spacings.medium} 0;
     > h2 {
+      border-left: 0.4rem solid ${theme.colors.Danger};
+      padding-left: ${theme.spacings.xxsmall};
       margin-bottom: ${theme.spacings.xsmall};
     }
     > div {

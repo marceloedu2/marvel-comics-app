@@ -104,7 +104,7 @@ const ComicsId = () => {
     <AuthTemplate>
       {comics && (
         <CardDescriptionContainer
-          title="Comic:"
+          title="Comic"
           name={comics.title}
           description={comics.description}
           data={comics.updated_at}
@@ -113,7 +113,7 @@ const ComicsId = () => {
         />
       )}
 
-      <CardsContainer title=" Comics to Character:">
+      <CardsContainer title=" Comics to Character">
         <SliderContainer settings={settings}>
           {characters.length > 0 ? (
             characters.map(character => {
