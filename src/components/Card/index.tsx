@@ -6,7 +6,7 @@ import { useRouter } from 'next/router'
 type CardProps = {
   id: number
   title: string
-  url: string
+  url?: string
   imageUrl: string
   liked: boolean
   onClickLike: (data: { id: number; liked: boolean }) => void
@@ -16,7 +16,9 @@ const Card = ({ id, title, url, imageUrl, liked, onClickLike }: CardProps) => {
   const router = useRouter()
 
   const handleClinkCard = (event: any) => {
-    if (event.target.id === 'img-div') router.push(url).catch()
+    if (url && event.target.id === 'img-div') {
+      router.push(url).catch()
+    }
   }
 
   return (

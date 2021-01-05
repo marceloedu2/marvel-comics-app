@@ -122,7 +122,6 @@ const ComicsId = () => {
                   key={character.id}
                   id={character.id}
                   title={character.name}
-                  url={`characters/${character.id}`}
                   imageUrl={character.url}
                   liked={character.liked}
                   onClickLike={onClickLikeCharacter}
