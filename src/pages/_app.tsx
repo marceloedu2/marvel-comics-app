@@ -25,7 +25,6 @@ const App = ({ Component, pageProps }: AppProps) => {
         <link rel="icon" href="/img/marvel.png" />
         <link rel="shortcut" href="/img/marvel.png" />
         <link rel="apple-touch-icon" href="/img/marvel.png" />
-        <link rel="manifest" href="/manifest.json" />
         <link rel="stylesheet" type="text/css" href="/css/nprogress.css" />
         <link rel="stylesheet" type="text/css" href="/css/slick.min.css" />
         <link
