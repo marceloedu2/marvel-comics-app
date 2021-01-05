@@ -1,6 +1,6 @@
 import React, { useCallback, useEffect, useState } from 'react'
 import AuthTemplate from '@/template/AuthenticationTemplate'
-import ComicCard from '@/components/Card'
+import Card from '@/components/Card'
 import CardsContainer from '@/widgets/CardsContainer'
 import Pagination from '@/components/Pagination'
 
@@ -120,11 +120,12 @@ const Comics = () => {
         {!loading ? (
           comicsData?.map(comic => {
             return (
-              <ComicCard
+              <Card
                 key={comic.id}
                 id={comic.id}
                 title={comic.title}
-                url={comic.url}
+                url={`comics/${comic.id}`}
+                imageUrl={comic.url}
                 liked={comic.liked}
                 onClickLike={onClickLike}
               />

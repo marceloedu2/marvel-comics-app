@@ -106,7 +106,8 @@ const Characters = () => {
                 key={character.id}
                 id={character.id}
                 title={character.name}
-                url={character.url}
+                url={`characters/${character.id}`}
+                imageUrl={character.url}
                 liked={character.liked}
                 onClickLike={onClickLike}
               />

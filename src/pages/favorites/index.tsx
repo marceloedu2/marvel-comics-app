@@ -128,7 +128,8 @@ const Favorites = () => {
                   key={comic.id}
                   id={comic.comicId}
                   title={comic.title}
-                  url={comic.url}
+                  url={`comics/${comic.comicId}`}
+                  imageUrl={comic.url}
                   liked={comic.liked}
                   onClickLike={() => handlerComicUnfavorable(comic.comicId)}
                 />
@@ -148,7 +149,8 @@ const Favorites = () => {
                   key={character.id}
                   id={character.characterId}
                   title={character.name}
-                  url={character.url}
+                  url={`characters/${character.characterId}`}
+                  imageUrl={character.url}
                   liked={character.liked}
                   onClickLike={() =>
                     handlerCharacterUnfavorable(character.characterId)

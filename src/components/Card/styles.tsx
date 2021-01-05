@@ -36,17 +36,26 @@ export const ImageContainer = styled.div<{ imgUrl: string }>`
 
 export const info = styled.div`
   ${({ theme }) => css`
-    width: 100%;
+    width: 25rem;
     height: 4rem;
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
     align-items: flex-start;
     margin: ${theme.spacings.xxsmall} 0 ${theme.spacings.xlarge} 0;
-    h3 {
+
+    > h3 {
       flex: 1;
+      display: flex;
+      width: 25rem;
+
+      justify-content: flex-start;
+      align-items: flex-start;
       font-size: ${theme.font.sizes.large};
       font-weight: ${theme.font.normal};
+      &:hover {
+        color: ${darken(0.3, theme.colors.TextLight)};
+      }
     }
   `}
 `
